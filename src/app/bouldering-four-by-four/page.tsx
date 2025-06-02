@@ -8,9 +8,7 @@ import {
   Play,
   Pause,
   RotateCcw,
-  Target,
   Trophy,
-  Clock,
   Zap,
   Coffee,
   Eye,
@@ -127,22 +125,6 @@ const TRAINING_TYPES: TrainingType[] = [
     icon: "",
   },
 ];
-
-const GRADE_SUGGESTIONS = {
-  V0: { main: "V0", easier: "V0", easiest: "V0" },
-  V1: { main: "V0", easier: "V0", easiest: "V0" },
-  V2: { main: "V1", easier: "V0", easiest: "V0" },
-  V3: { main: "V2", easier: "V1", easiest: "V0" },
-  V4: { main: "V3", easier: "V2", easiest: "V1" },
-  V5: { main: "V4", easier: "V3", easiest: "V2" },
-  V6: { main: "V5", easier: "V4", easiest: "V3" },
-  V7: { main: "V6", easier: "V5", easiest: "V4" },
-  V8: { main: "V7", easier: "V6", easiest: "V5" },
-  V9: { main: "V8", easier: "V7", easiest: "V6" },
-  V10: { main: "V9", easier: "V8", easiest: "V7" },
-  V11: { main: "V10", easier: "V9", easiest: "V8" },
-  "V12+": { main: "V11", easier: "V10", easiest: "V9" },
-};
 
 export default function BoulderingFourByFour() {
   const [maxGrade, setMaxGrade] = useState<string>("V4");
@@ -465,7 +447,6 @@ export default function BoulderingFourByFour() {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  const stats = calculateStats();
   const selectedTrainingType = TRAINING_TYPES.find(
     (t) => t.id === trainingType
   );
