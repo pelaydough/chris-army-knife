@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-dark-900: #1f1f1e;
+  --color-dark-700: #262727;
+  --color-dark-500: #2a2b2b;
+  --color-primary: #dadbdb;
+}
+
+@layer utilities {
+  .tool-container {
+    @apply p-4 min-h-[calc(100vh-68px)];
+  }
+}
+
+html,
+body {
+  @apply text-primary font-sans;
+  font-family: "Courier New", monospace;
+}
+
+* {
+  font-family: "Courier New", monospace;
+}
