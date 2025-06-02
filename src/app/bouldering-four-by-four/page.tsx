@@ -181,7 +181,7 @@ export default function BoulderingFourByFour() {
     }
   };
 
-  const TIME_REMAINING = 5;
+  const TIME_REMAINING = 240;
 
   // Load collapsed state from localStorage on mount
   useEffect(() => {
