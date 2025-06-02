@@ -422,25 +422,6 @@ export default function BoulderingFourByFour() {
     );
   };
 
-  const calculateStats = (): WorkoutStats => {
-    const totalProblems = rounds.length * 4;
-    const flashedProblems = rounds.reduce(
-      (sum, round) =>
-        sum + round.problems.filter((problem) => problem.flashed).length,
-      0
-    );
-    const flashRate =
-      totalProblems > 0 ? (flashedProblems / totalProblems) * 100 : 0;
-
-    return {
-      currentRound,
-      totalRounds: 4,
-      flashedProblems,
-      totalProblems,
-      flashRate,
-    };
-  };
-
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
