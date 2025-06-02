@@ -1,11 +1,21 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @theme inline {
   --color-dark-900: #1f1f1e;
   --color-dark-700: #262727;
   --color-dark-500: #2a2b2b;
   --color-primary: #dadbdb;
+}
+
+@layer base {
+  :root {
+    --color-dark-900: #1f1f1e;
+    --color-dark-700: #262727;
+    --color-dark-500: #2a2b2b;
+    --color-primary: #dadbdb;
+  }
 }
 
 @layer utilities {
@@ -16,8 +26,7 @@
 
 html,
 body {
-  @apply text-primary font-sans;
-  font-family: "Courier New", monospace;
+  @apply text-primary font-mono;
 }
 
 * {
